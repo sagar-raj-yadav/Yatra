@@ -1,0 +1,46 @@
+
+i.router.post('/bookseat',bookingseat);
+Method: POST
+URL: http://localhost:5000/api/booking/bookseat
+Headers:
+Content-Type: application/json
+Body: (raw JSON)
+
+
+json data
+{
+  "userId": "user123",
+  "flightId": "flight456",
+  "seatNumber": "12A",
+  "reservationDate": "2024-09-30T00:00:00Z",
+  "status": "confirmed"
+}
+
+
+
+ii.router.get('/getdataId/:id',bookingseatById);
+Method: GET
+URL: http://localhost:5000/api/booking/getdataId/{_id}
+
+
+
+iii.router.get('/getdataByUserId/:userId',getbookingOfUser);
+Method: GET
+URL: http://localhost:5000/api/booking/getdataByUserId/{userId}
+
+
+
+iv.router.put('/updatebooking/:id',updatebooking);
+Method: PUT
+URL: http://localhost:5000/api/booking/updatebooking/{_id}
+
+json data:(updated)
+{
+  "seatNumber": "14B",
+  "status": "confirmed"
+}
+
+
+v. router.patch('/cancelbooking/:id',cancelBooking)
+Method: PATCH
+URL: http://localhost:5000/api/booking/cancelbooking/{_id}
